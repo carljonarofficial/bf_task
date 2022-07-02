@@ -1,0 +1,61 @@
+/* Login and Register CSS */
+#login-register-header {
+    text-align: center;
+}
+#login-register-header img,
+h3 {
+    display: inline-block;
+}
+
+#login-register-header img {
+    width: 7rem;
+}
+
+#login-register-header h3 {
+    margin: 2.1rem 1rem;
+}
+
+#error-msg {
+    margin-bottom: 1rem;
+}
+
+.input-error {
+    border-color: red;
+}
+.custom-or-text {
+    display: flex;
+    flex-direction: row;
+}
+
+.custom-or-text:before,
+p:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #000;
+    margin: auto 0.5rem;
+}
+
+#google-login-btn {
+    width: 100%;
+    height: calc(3.5rem + 2px);
+    border: 0;
+    border-radius: 0.25rem;
+    background-color: #4285f4;
+    position: relative;
+}
+
+#google-login-btn img {
+    background-color: white;
+    padding: 1rem;
+    position: absolute;
+    top: 0.09rem;
+    left: 0.09rem;
+    border-radius: 0.25rem;
+}
+
+#google-login-btn p {
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    margin: 0 0 0 4rem;
+}
