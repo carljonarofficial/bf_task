@@ -63,7 +63,7 @@
                                         <h5 class="modal-title" id="event-modal-label">Add Event</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form action="" method="post">
+                                    <form id="event-details-form">
                                         <div class="modal-body">
                                             <div class="mb-3">
                                                 <label class="form-label">Title:</label>
@@ -111,6 +111,13 @@
             // Add Event Button
             $("#add-event-btn").click(function () {
                 $("#event-modal").modal('show');
+            });
+
+            // Save Event Details Form
+            $("#event-details-form").submit(function () {
+                var flag = true;
+                
+                return false;
             });
         </script>
     </body>
