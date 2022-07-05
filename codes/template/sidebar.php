@@ -11,19 +11,25 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Events
                 </a>
-                <a class="nav-link collapsed" href="#">
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMessage" aria-expanded="false" aria-controls="collapseMessage">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                     Message
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="collapseMessage" aria-labelledby="headingMessage" data-bs-parent="#sidenavAccordion">
+                <div class="collapse" id="collapseMessage" aria-labelledby="collapseMessageHeading" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="">Inbox</a>
                         <a class="nav-link" href="">Compose</a>
                     </nav>
                 </div>
-                <a class="nav-link" href="">
+                <a class="nav-link" href="assignments.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                     Assignments
+                </a>
+                <!-- For Admin Use Only -->
+                <a class="nav-link" href="">
+                    <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                    Users
                 </a>
                 <div class="sb-sidenav-menu-heading">Miscellaneous</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFileLog" aria-expanded="false" aria-controls="collapseFileLog">
