@@ -21,13 +21,11 @@
     <body class="sb-nav-fixed">
         <?php include_once "template/navbar.php";?>
         <div id="layoutSidenav">
-            <?php include_once "template/sidebar.php";?>
+            <?php $active_link = "events"; include_once "template/sidebar.php";?>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid position-relative px-4" id="layoutContainer_content">
-                        <div class="toast-container position-fixed top-3 end-0 me-3" style="z-index: 11">
-                            <!-- Toasts Placeholder -->
-                        </div>
+                        <?php include_once "template/toasts-placeholder.php";?>
                         <!-- Content Header -->
                         <h1 class="mt-4">Events</h1>
                         <ol class="breadcrumb mb-4">

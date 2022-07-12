@@ -16,12 +16,21 @@
         if (!empty($account_record)) {
             // Check if input password matches with record
             if (password_verify($password, $account_record['password'])) {
-                // Stores Session Variables and proceed to dashboard page
-                $_SESSION['user_id'] = $account_record['id'];
-				$_SESSION['first_name'] = $account_record['first_name'];
-                $_SESSION['last_name'] = $account_record['last_name'];
-                $_SESSION['is_admin'] = $account_record['is_admin'];
-				$url = "dashboard.php";
+                // Create Log In Log and get insert ID
+                $login_log_id = run_mysql_query("INSERT INTO login_logs (account_id, created_at) VALUES ({$account_record['id']}, NOW())");
+                // Check if Runs Successfully
+                if ($login_log_id > 0) {
+                    // Stores Session Variables and proceed to dashboard page
+                    $_SESSION['user_id'] = $account_record['id'];
+                    $_SESSION['first_name'] = $account_record['first_name'];
+                    $_SESSION['last_name'] = $account_record['last_name'];
+                    $_SESSION['is_admin'] = $account_record['is_admin'];
+                    $url = "dashboard.php";
+                } else {
+                    // Sets the Session Variable for existing email message
+                    $_SESSION['registration-status'] = "An error has occured!";
+                    $url = "login.php";
+                }
             } else {
                 // Sets the Session Variable for existing email message
                 $_SESSION['registration-status'] = "Invalid password!";

@@ -15,7 +15,7 @@
     <body class="sb-nav-fixed">
         <?php include_once "template/navbar.php";?>
         <div id="layoutSidenav">
-            <?php include_once "template/sidebar.php";?>
+            <?php $active_link = "dashboard"; include_once "template/sidebar.php";?>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
