@@ -20,7 +20,7 @@
             // Check if input password matches with record
             if (password_verify($password, $account_record['password'])) {
                 // Create Log In Log and get insert ID
-                $login_log_id = run_mysql_query("INSERT INTO login_logs (account_id, created_at) VALUES ({$account_record['id']},{$current_datetime})");
+                $login_log_id = run_mysql_query("INSERT INTO login_logs (account_id, created_at) VALUES ({$account_record['id']},'{$current_datetime}')");
                 // Check if Runs Successfully
                 if ($login_log_id > 0) {
                     // Stores Session Variables and proceed to dashboard page
@@ -73,7 +73,7 @@
                 $is_admin = 0;
             }
             // Create Account and Get Insert ID
-			$insert_id = run_mysql_query("INSERT INTO accounts (first_name, last_name, email, password, position, is_admin, status, created_at) VALUES ('{$first_name}', '{$last_name}', '{$email}', '{$password}', NULL, {$is_admin}, 'active', {$current_datetime})");
+			$insert_id = run_mysql_query("INSERT INTO accounts (first_name, last_name, email, password, position, is_admin, status, created_at) VALUES ('{$first_name}', '{$last_name}', '{$email}', '{$password}', NULL, {$is_admin}, 'active', '{$current_datetime}')");
             // Check if Runs Successfully
 			if ($insert_id > 0) {
                 // Stores Session Variables and proceed to dashboard page
