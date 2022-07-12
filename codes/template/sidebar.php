@@ -24,7 +24,7 @@
                 </div>
                 <a class="nav-link" href="assignments.php">
                     <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                    Assignments
+                    Assignments | Tasks
                 </a>
                 <!-- For Admin Use Only -->
                 <a class="nav-link" href="">
